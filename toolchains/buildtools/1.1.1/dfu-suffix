@@ -1,0 +1,5 @@
+#!/bin/bash
+tools_root_dir=$(cd $(dirname $0)/ && pwd)
+export DYLD_LIBRARY_PATH=$tools_root_dir/lib
+exec $tools_root_dir/_dfu-suffix "$@"
+
